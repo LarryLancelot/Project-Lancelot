@@ -1,0 +1,27 @@
+extDB2: Version: 71
+extDB2: https://github.com/Torndeco/extDB2
+extDB2: Windows Version
+Message: All development for extDB2 is done on a Linux Dedicated Server
+Message: If you would like to Donate to extDB2 Development
+Message: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=2SUEFTGABTAM2
+Message: Also leave a message if there is any particular feature you would like to see added.
+Message: Thanks for all the people that have donated.
+Message: Torndeco: 20/02/15
+
+
+extDB2: Found extdb-conf.ini
+extDB2: Detected 4 Cores, Setting up 4 Worker Threads
+
+
+[17:06:11:196940 +11:00] [Thread 10872] extDB2: Database Type: MySQL
+[17:06:11:228649 +11:00] [Thread 10872] extDB2: Database Session Pool Started
+[17:06:11:235123 +11:00] [Thread 10872] extDB2: SQL_RAW_V2: Initialized: ADD_QUOTES True
+[17:06:11:245163 +11:00] [Thread 3996] extDB2: SQL_RAW_V2: Error StatementException: MySQL: [MySQL]: [Comment]: mysql_stmt_execute error	[mysql_stmt_error]: The user specified as a definer ('altislife'@'localhost') does not exist	[mysql_stmt_errno]: 1449	[mysql_stmt_sqlstate]: HY000	[statemnt]: CALL resetLifeVehicles
+[17:06:11:245207 +11:00] [Thread 3996] extDB2: SQL_RAW_V2: Error StatementException: SQL: CALL resetLifeVehicles
+[17:06:11:246033 +11:00] [Thread 4768] extDB2: SQL_RAW_V2: Error StatementException: MySQL: [MySQL]: [Comment]: mysql_stmt_execute error	[mysql_stmt_error]: The user specified as a definer ('altislife'@'localhost') does not exist	[mysql_stmt_errno]: 1449	[mysql_stmt_sqlstate]: HY000	[statemnt]: CALL deleteOldGangs
+[17:06:11:246064 +11:00] [Thread 4768] extDB2: SQL_RAW_V2: Error StatementException: SQL: CALL deleteOldGangs
+[17:06:11:246327 +11:00] [Thread 196] extDB2: SQL_RAW_V2: Error StatementException: MySQL: [MySQL]: [Comment]: mysql_stmt_execute error	[mysql_stmt_error]: The user specified as a definer ('altislife'@'localhost') does not exist	[mysql_stmt_errno]: 1449	[mysql_stmt_sqlstate]: HY000	[statemnt]: CALL deleteOldHouses
+[17:06:11:246342 +11:00] [Thread 196] extDB2: SQL_RAW_V2: Error StatementException: SQL: CALL deleteOldHouses
+[17:06:11:246461 +11:00] [Thread 9068] extDB2: SQL_RAW_V2: Error StatementException: MySQL: [MySQL]: [Comment]: mysql_stmt_execute error	[mysql_stmt_error]: The user specified as a definer ('altislife'@'localhost') does not exist	[mysql_stmt_errno]: 1449	[mysql_stmt_sqlstate]: HY000	[statemnt]: CALL deleteDeadVehicles
+[17:06:11:246479 +11:00] [Thread 9068] extDB2: SQL_RAW_V2: Error StatementException: SQL: CALL deleteDeadVehicles
+[17:07:06:067399 +11:00] [Thread 10872] extDB2: Stopping ...
