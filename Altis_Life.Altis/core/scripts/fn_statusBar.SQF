@@ -17,6 +17,6 @@ disableSerialization;
 	{
 		sleep 1;
 		_counter = _counter - 1;
-		((uiNamespace getVariable "osefStatusBar")displayCtrl 1000)ctrlSetText parseText format["<t color=''>Food : %8 </t>| Thirst : %9 | FPS: %1 | Police: %2 | Civilians: %3 | EMS: %4 | CASH: %5 | BANK: %6 | GRIDREF: %7 |", round diag_fps, west countSide playableUnits, civilian countSide playableUnits, independent countSide playableUnits,[life_cash] call life_fnc_numberText,[life_atmbank] call life_fnc_numberText,mapGridPosition player,[life_hunger] call life_fnc_numberText,[life_thirst] call life_fnc_numberText, _counter],;
+		((uiNamespace getVariable "osefStatusBar")displayCtrl 1000)ctrlSetStructuredText parsetext format["<t color='#db1904'>Food : %7 </t>| <t color='#046cdb'>Thirst : %8</t> |<t color='#e00dab'> FPS: %1 </t>|<t color='#0044CC'> Police: %1</t> |<t color='#760de0'> Civilians: %2 </t>|<t color='#2fdb0d'> EMS: %3</t> | <t color='#d4db0d'>CASH: %4 </t>|<t color='#d4db0d'> BANK: %5 </t>| GRIDREF: %6 |", west countSide playableUnits, civilian countSide playableUnits, independent countSide playableUnits,[life_cash] call life_fnc_numberText,[life_atmbank] call life_fnc_numberText,mapGridPosition player,[life_hunger] call life_fnc_numberText,[life_thirst] call life_fnc_numberText, _counter],;
 	};
 };
