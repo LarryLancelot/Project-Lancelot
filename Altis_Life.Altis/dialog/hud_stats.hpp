@@ -15,7 +15,6 @@ class playerHUD {
     onLoad = "uiNamespace setVariable ['playerHUD',_this select 0]";
     objects[] = {};
     controls[] = {
-        Life_RscBackground_HUD
     };
 
     //Background

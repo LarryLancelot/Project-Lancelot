@@ -1,4 +1,4 @@
-#define ST_CENTER 0x02
+#define ST_CENTER 0x01
 
 class osefStatusBar {
     idd = -1;
@@ -14,14 +14,14 @@ class osefStatusBar {
     class controls {
         class statusBarText {
             idc = 1000;
-            x = safezoneX + safezoneW - 1;
-            y = safezoneY + safezoneH - 0.08;
+            x = safezoneX + safezoneW - 1.61;
+            y = safezoneY + safezoneH - 0.05;
             w = 1;
             h = 0.03;
             shadow = 1;
-            colorBackground[] = { 1, 0.3, 0, 0.35 };  // uncomment and increase 4th number to have a background
-            font = "PuristaSemibold";
-            size = 0.035;
+            colorBackground[] = { 0, 0.0, 0, 0.35 };  // uncomment and increase 4th number to have a background
+            font = "TahomaB";
+            size = 0.03;
             type = 13;
             style = 1;
             text="Loading server info...";
