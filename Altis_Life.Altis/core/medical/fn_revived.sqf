@@ -44,3 +44,4 @@ player setVariable ["Reviving",nil,TRUE];
 [] call life_fnc_playerSkins;
 [] call life_fnc_hudUpdate; //Request update of hud.
 [] call SOCK_fnc_updateRequest;
+life_nlrtimer_stop = true;

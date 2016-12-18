@@ -286,6 +286,7 @@ class Life_Client_Core {
         class respawned {};
         class revived {};
         class revivePlayer {};
+        class newLifeRule {};
     };
 
     class Network {

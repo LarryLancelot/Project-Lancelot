@@ -55,8 +55,14 @@ if (life_spawn_point isEqualTo []) then {
 };
 
 if (life_firstSpawn) then {
+[] spawn
+{
+    cutText ["","BLACK IN"];
+   [] execVM "core\scripts\fn_IntroCam.sqf";
+
     life_firstSpawn = false;
-    [] call life_fnc_welcomeNotification;
+        };
 };
+
 [] call life_fnc_playerSkins;
 [] call life_fnc_hudSetup;

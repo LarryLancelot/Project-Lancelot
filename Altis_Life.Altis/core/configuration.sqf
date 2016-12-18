@@ -47,6 +47,8 @@ life_pos_exist = false;
 life_pos_attach = [];
 life_civ_position = [];
 life_markers = false;
+life_nlrtimer_running = false;
+life_nlrtimer_stop = false;
 
 //Settings
 life_settings_enableSidechannel = profileNamespace getVariable["life_enableSidechannel",true];
