@@ -4,7 +4,7 @@ Released to AltisLifeRPG.com
 Credits to Ciaran for original creation of the script
 Edited by Larry to add markers
 */
-private["_uiDisp","_time","_timer","_playerpos","_marker","_delmarker"];
+private["_uiDisp","_time","_timer","_playerpos","_marker","_delmarker","_CheckPos"];
 if(playerSide isEqualTo west) exitWith {};
 if(playerSide isEqualTo independent) exitWith {};
 disableSerialization;
@@ -18,6 +18,10 @@ _marker = createMarkerlocal ["MarkerNLR",_playerpos];
       "MarkerNLR" setMarkertype "hd_marker"
       "MarkerNLR" setMarkerText "NLR DO NOT ENTER"
 _delmarker = deleteMarkerLocal "MarkerNLR"
+_Checkpos = if ((player distance (getMarkerPos _marker))) then
+{
+hint "You have entered a NLR area LEAVE IMMEDIATLY. Staff have also been alerted to this act" 
+};
 life_nlrtimer_running = true;
 while {true} do {
       if(isNull _uiDisp) then {
@@ -25,6 +29,7 @@ while {true} do {
             _uiDisp = uiNamespace getVariable "life_nlrtimer";
             _timer = _uiDisp displayCtrl 38301;
             _marker
+            _CheckPos
       };
       if(round(_time - time) < 1) exitWith {};
       if(life_nlrtimer_stop) exitWith {life_nlrtimer_stop = false;};
