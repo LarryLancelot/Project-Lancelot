@@ -15,7 +15,7 @@ _camTime = 30;
 
 // you can change the time for sure, I adjusted mine to the intro music
 // the one below basically says that if you already joined the server once the time of the camera movement will be faster, else it might get annoying
-if(!life_firstSpawn) then {	_camTime = 30;};
+if(!life_firstSpawn) then {	_camTime = 10;};
 
 //intro move
 showCinemaBorder true;
