@@ -4,7 +4,7 @@ Released to AltisLifeRPG.com
 Credits to Ciaran for original creation of the script
 Edited by Larry to add markers
 */
-private["_uiDisp","_time","_timer","_playerpos","_marker"];
+private["_uiDisp","_time","_timer","_playerpos","_marker","_delmarker"];
 if(playerSide isEqualTo west) exitWith {};
 if(playerSide isEqualTo independent) exitWith {};
 disableSerialization;
@@ -17,6 +17,7 @@ _marker = createMarkerlocal ["MarkerNLR",_playerpos];
       "MarkerNLR" setMarkerColor "ColorBlack"
       "MarkerNLR" setMarkertype "hd_marker"
       "MarkerNLR" setMarkerText "NLR DO NOT ENTER"
+_delmarker = deleteMarkerLocal "MarkerNLR"
 life_nlrtimer_running = true;
 while {true} do {
       if(isNull _uiDisp) then {
@@ -29,7 +30,7 @@ while {true} do {
       if(life_nlrtimer_stop) exitWith {life_nlrtimer_stop = false;};
       _timer ctrlSetText format["NLR: %1",[(_time - time),"MM:SS"] call BIS_fnc_secondsToString];
       sleep 0.1;
-      deleteLocalMarker "MarkerNLR"
+      _delmarker
 };
 life_nlrtimer_running = false;
 7 cutText["","PLAIN"];
