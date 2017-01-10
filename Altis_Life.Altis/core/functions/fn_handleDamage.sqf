@@ -44,6 +44,13 @@ if (!isNull _source) then {
         };
     };
 };
+//ANIT-VDM Script
+    if (vehicle _source isKindOf "LandVehicle") then {
+        if (_source !=_unit and {alive _unit} and {isPlayer _source}) then{
+        _damage = 0.001;
+
+    };    
+};
 
 [] spawn life_fnc_hudUpdate;
 _damage;
