@@ -1,1 +1,0 @@
-hint "Welcome to larrys life";

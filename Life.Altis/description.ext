@@ -1,0 +1,12 @@
+author = "Cjay";
+onLoadName = "Arma Life";
+onLoadMission = "A new roleplay explansion developed by cjay";
+class header
+{
+	gameType = RPG;
+	briefingName = "Arma Life";
+	respawn = 2;
+};
+class class CfgFunctions
+{
+};
