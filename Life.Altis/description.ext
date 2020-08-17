@@ -1,11 +1,6 @@
 author = "Cjay";
 onLoadName = "Arma Life";
-onLoadMission = "A new roleplay explansion developed by cjay";
-class header {
-	gameType = RPG;
-	briefingName = "Arma Life";
-	respawn = 2;
-};
+onLoadMission = "A new roleplay expansion developed by cjay";
 class CfgFunctions {
-	#include "Functions.hpp";
+	#include "Functions.hpp"
 };

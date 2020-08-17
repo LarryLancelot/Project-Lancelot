@@ -2,13 +2,13 @@ class Server {
 	tag = "SVR";
 	class Database {
 		file = "functions\server";
-		class reqdata{};
+		class reqData{};
 	};
 };
 class Life {
-	tag = "life";
-	class top {
+	tag = "Life";
+	class Functions {
 		file = "functions";
-		test{};
-	};
-};
+		class test {};
+	}
+}
