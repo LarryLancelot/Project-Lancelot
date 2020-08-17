@@ -1,7 +1,7 @@
 /*
 Author: Cjay
 Description: called when a player join the server to check whether they are present in the database
- */
+ 
 params [
 	["_uid,",[""]]
 ];
@@ -12,3 +12,4 @@ if (_queryResult isEqualType ""|| _queryResult isEqualTO []) exitWith {
 	[] remoteexecCall //add new player
 };
 //pull player data
+*/

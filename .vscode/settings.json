@@ -1,0 +1,12 @@
+{
+    "ego.power-tools": {
+        "commands": {
+            "myCommand": {
+                "script": "start.js",
+                "button": {
+                    "text": "Run Arma Server"
+                }
+            }
+        }
+    }
+}

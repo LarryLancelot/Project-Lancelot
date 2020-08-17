@@ -9,7 +9,7 @@
 	Parameters:
 		0: INTEGER (1 = ASYNC + not return for update/insert, 2 = ASYNC + return for query's).
 		1: STRING (Query to be ran).
-*/
+
 
 if (!params [
 	["_mode", 0, [0]],
@@ -58,3 +58,4 @@ _queryResult = call compile _queryResult;
 if ((_queryResult select 0) isEqualTo 0) exitWith {diag_log format ["extDB3: Protocol Error: %1", _queryResult]; []};
 private _return = (_queryResult select 1);
 _return
+*/

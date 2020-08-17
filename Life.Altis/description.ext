@@ -5,5 +5,13 @@ class CfgFunctions {
 	#include "Functions.hpp"
 };
 class CfgServer {
-    DatabaseName = "Database"; //Config name that'll be grep in the extdb-conf.ini. Default: [altislife]
+    DatabaseName = "Database";
+};
+class header
+{
+	gameType = RPG;
+	onLoadIntro = "Welcome Gamer";
+	onLoadMissionTime = 0;
+	onLoadIntroTime = 0;
+	briefingName = "RPG by Cjay";
 };

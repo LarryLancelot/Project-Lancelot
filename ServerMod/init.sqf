@@ -1,4 +1,4 @@
-
+diag_log "init started";
 if ( isNil {uiNamespace getVariable "extDB_SQL_CUSTOM_ID"}) then
 {
 	// extDB3 Version Check
@@ -8,16 +8,16 @@ if ( isNil {uiNamespace getVariable "extDB_SQL_CUSTOM_ID"}) then
 	if ((parseNumber _result) < 1.026) exitWith {diag_log "Error: extDB3 version 1.026 or Higher Required";};
 
 	// extDB3 Connect to Database
-	_result = call compile ("extDB3" callExtension format["9:ADD_DATABASE:%1", getText(missionConifgFile >> "CfgServer" >> "DatabaseName")]);
+	_result = call compile ("extDB3" callExtension format["9:ADD_DATABASE:%1", getText(missionConfigFile >> "CfgServer" >> "DatabaseName")]);
 	if (_result select 0 isEqualTo 0) exitWith {diag_log format ["extDB3: Error Failed to Connect to Database: %1", _result]; false};
 	diag_log "extDB3: Connected to Database";
 
 	// extDB3 Load Protocol
 	private _database = "Database"; // This is case sensitive
-	_result = call compile ("extDB3" callExtension format["9:ADD_DATABASE_PROTOCOL:%1:SQL_CUSTOM:%2:master.ini", getText(missionConifgFile >> "CfgServer" >> "DatabaseName"),_database]);
-	if ((_result select 0) isEqualTo 0) exitWith {diag_log format ["extDB3: Error Database Setup: %1", _result]; false};
+	_result = call compile ("extDB3" callExtension format["9:ADD_DATABASE_PROTOCOL:%1:SQL_CUSTOM:proto2:master.ini",getText(missionConfigFile >> "CfgServer" >> "DatabaseName")]);
+	if ((_result select 0) isEqualTo 0) exitWith {diag_log format ["extDB3: Error Database Setup: %1", _result];};
 
-	diag_log format "extDB3: Initalized SQL_CUSTOM Protocol";
+	diag_log "extDB3: Initalized SQL_CUSTOM Protocol";
 
 	// extDB3 Lock
 	"extDB3" callExtension "9:LOCK";
