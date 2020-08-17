@@ -4,3 +4,6 @@ onLoadMission = "A new roleplay expansion developed by cjay";
 class CfgFunctions {
 	#include "Functions.hpp"
 };
+class CfgServer {
+    DatabaseName = "Database"; //Config name that'll be grep in the extdb-conf.ini. Default: [altislife]
+};

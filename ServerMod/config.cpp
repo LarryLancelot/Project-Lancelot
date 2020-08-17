@@ -11,6 +11,8 @@ class CfgFunctions {
         class Master {
             file = "\ServerMod\Functions\SQL";
             class reqData{};
+            class addPlayer{};
+            class async {};
         };
     };
 };
