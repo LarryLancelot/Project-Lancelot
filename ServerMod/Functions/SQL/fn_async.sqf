@@ -1,23 +1,16 @@
 /*
-	File: asyncCall.sqf
-	Author: Bryan "Tonic" Boardwine
-
-	Description:
-	Commits an asynchronous call to extDB
-	Gets result via extDB  4:x + uses 5:x if message is Multi-Part
-
 	Parameters:
 		0: INTEGER (1 = ASYNC + not return for update/insert, 2 = ASYNC + return for query's).
 		1: STRING (Query to be ran).
-
+*/
 
 if (!params [
 	["_mode", 0, [0]],
-	["_queryStmt", "", [""]]
-	["_qType","",[""]]
+	["_qtype", "", [""]]
+	["_qData","",[""]]
 ]) exitWith {};
 
-private _key = "extDB3" callExtension format["%1:%2:%3",_mode, _qType, _queryStmt];
+private _key = "extDB3" callExtension format["%1:%2:%3",_mode, _qType, _qData];
 if(_mode isEqualTo 1) exitWith {true};
 
 _key = call compile format["%1",_key];
@@ -58,4 +51,3 @@ _queryResult = call compile _queryResult;
 if ((_queryResult select 0) isEqualTo 0) exitWith {diag_log format ["extDB3: Protocol Error: %1", _queryResult]; []};
 private _return = (_queryResult select 1);
 _return
-*/
