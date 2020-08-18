@@ -8,30 +8,42 @@ class EditorData
 	toggles=1;
 	class ItemIDProvider
 	{
-		nextID=2;
+		nextID=22;
+	};
+	class LayerIndexProvider
+	{
+		nextID=4;
 	};
 	class Camera
 	{
-		pos[]={3624.2031,18.673004,13131.666};
-		dir[]={0.099650055,-0.39639214,-0.91266501};
-		up[]={0.0430253,0.91807866,-0.39405435};
-		aside[]={-0.99409896,-2.1298183e-007,-0.10854222};
+		pos[]={585.82062,149.22864,25276.221};
+		dir[]={0.27070311,-0.24664794,-0.93059838};
+		up[]={0.068903685,0.96908957,-0.23687626};
+		aside[]={-0.96026236,-3.4706318e-008,-0.2793324};
 	};
 };
 binarizationWanted=0;
 addons[]=
 {
-	"A3_Characters_F_Exp_Civil"
+	"A3_Characters_F_Exp_Civil",
+	"A3_Structures_F_Bootcamp_VR_Blocks"
 };
 class AddonsMetaData
 {
 	class List
 	{
-		items=1;
+		items=2;
 		class Item0
 		{
 			className="A3_Characters_F_Exp";
 			name="Arma 3 Apex - Characters and Clothing";
+			author="Bohemia Interactive";
+			url="https://www.arma3.com";
+		};
+		class Item1
+		{
+			className="A3_Structures_F_Bootcamp";
+			name="Arma 3 Bootcamp Update - Buildings and Structures";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
@@ -64,7 +76,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=1;
+		items=2;
 		class Item0
 		{
 			dataType="Group";
@@ -77,24 +89,188 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={3632.1072,10.102677,13116.162};
+						position[]={3632.1069,10.102678,13116.162};
 					};
 					side="Civilian";
 					flags=7;
 					class Attributes
 					{
-						isPlayer=1;
+						description="Civillian 1";
+						isPlayable=1;
 					};
 					id=1;
 					type="C_Man_casual_1_F";
-					atlOffset=-9.5367432e-007;
+					atlOffset=9.5367432e-007;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="speaker";
+							expression="_this setspeaker _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="Male01GRE";
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=0.95999998;
+								};
+							};
+						};
+						nAttributes=2;
+					};
 				};
 			};
 			class Attributes
 			{
 			};
 			id=0;
-			atlOffset=-9.5367432e-007;
+			atlOffset=9.5367432e-007;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="groupID";
+					expression="_this setGroupID [_value];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="Civillian";
+						};
+					};
+				};
+				nAttributes=1;
+			};
+		};
+		class Item1
+		{
+			dataType="Layer";
+			name="Tutorial Place";
+			class Entities
+			{
+				items=3;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={-340.81299,-1.2599945,31241.381};
+					};
+					side="Empty";
+					flags=1;
+					class Attributes
+					{
+						disableSimulation=1;
+					};
+					id=16;
+					type="Land_VR_Block_01_F";
+					atlOffset=180.71001;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="allowDamage";
+							expression="_this allowdamage _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						nAttributes=1;
+					};
+				};
+				class Item1
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={-350.68701,6.2689972,31241.365};
+					};
+					side="Empty";
+					flags=1;
+					class Attributes
+					{
+						disableSimulation=1;
+					};
+					id=14;
+					type="Land_VR_Block_01_F";
+					atlOffset=188.239;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="allowDamage";
+							expression="_this allowdamage _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						nAttributes=1;
+					};
+				};
+				class Item2
+				{
+					dataType="Layer";
+					name="Layer 2";
+					id=21;
+					atlOffset=185.97;
+				};
+			};
+			id=20;
+			atlOffset=185.22226;
 		};
 	};
 };
