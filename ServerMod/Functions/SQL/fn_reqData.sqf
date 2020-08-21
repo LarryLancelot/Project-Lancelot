@@ -1,14 +1,14 @@
 /*
 Author: Cjay
-Description: called when a player join the server to check whether they are present in the database
+Description: called when a player join the server to check whether they are present in the database if true
  */
 params [
-	["_uid,",[""]]
+	["_uid","",[""]]
 ];
 diag_log format ["Query sent %1",_uid];
-private _queryResult = [2,"checkPlayerExists",_uid] call DB_fnc_async;
+private _queryResult = [2,"checkPlayerExists",_uid] call SQL_fnc_async;
 diag_log format ["result = %1",_queryResult];
 if (_queryResult isEqualType ""|| _queryResult isEqualTO []) exitWith {
-	diag_log "new playertime";
+	[1,"insertNewPlayer",_uid] call SQL_fnc_async;
 };
 //pull player data

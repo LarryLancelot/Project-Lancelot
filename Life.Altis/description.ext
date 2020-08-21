@@ -14,4 +14,6 @@ class header
 	onLoadMissionTime = 0;
 	onLoadIntroTime = 0;
 	briefingName = "RPG by Cjay";
+	maxPlayer = 200;
+	minPlayer = 1;
 };

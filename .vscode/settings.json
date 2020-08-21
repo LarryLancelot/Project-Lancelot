@@ -1,12 +1,14 @@
 {
     "ego.power-tools": {
-        "commands": {
-            "myCommand": {
-                "script": "start.js",
-                "button": {
-                    "text": "Run Arma Server"
+        "jobs": [
+            {
+                "name": "My job",
+                "description": "A job that runs a 'git fetch' all 30 minutes.",
+                "action": {
+                    "type": "shell",
+                    "command": "Starter.bat"
                 }
             }
-        }
+        ]
     }
 }
