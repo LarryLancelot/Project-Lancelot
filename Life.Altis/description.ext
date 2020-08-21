@@ -1,6 +1,7 @@
 author = "Cjay";
 onLoadName = "Arma Life";
 onLoadMission = "A new roleplay expansion developed by cjay";
+disabledAI = 1;
 class CfgFunctions {
 	#include "Functions.hpp"
 };
