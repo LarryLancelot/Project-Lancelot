@@ -3,6 +3,7 @@ class Server {
 	class Database {
 		file = "functions\server";
 		class reqData{};
+		class addName{};
 	};
 };
 class Life {
