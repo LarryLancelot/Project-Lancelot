@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project name="Altis Life RPG">
+    <Package name="init">
+        <Key ID="STR_Init_Setup">
+            <Original>Setting Up Client</Original>
+        </Key>
+    </Package>
+</Project>
